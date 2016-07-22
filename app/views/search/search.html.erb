@@ -1,0 +1,13 @@
+<form action="search" method="get">
+  <input type="text" name="search_input">
+  <button class="submit">Search</button>
+</form>
+
+
+<% @search_results.each do |pokemon| %>
+  <%= pokemon.name %>
+<% end %>
+
+<% @search_results2.each do |pokemon| %>
+  <%= pokemon.name %>
+<% end %>
