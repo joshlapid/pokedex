@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h1>Pokemon Index</h1>
   <form action="search" method="get">
-    <input type="text" name="search_input">
+    <input type="text" name="search_input"/>
     <button class="submit">Search</button>
   </form>
 </div>
@@ -11,39 +11,37 @@
 
   </thead>
   <tbody>
-
-    <% @search_results_name.each do |pokemon| %>
-    <tr class="panel panel-default">
-      <td><%= pokemon.name %></td>
-      <td><%= pokemon.element %></td>
-      <td><%= pokemon.description %></td>
-    </tr>
-    <% end %>
-
-    <% @search_results_element.each do |pokemon| %>
+    <% if !@search_results_name.nil? %>
+      <% @search_results_name.each do |pokemon| %>
       <tr class="panel panel-default">
         <td><%= pokemon.name %></td>
         <td><%= pokemon.element %></td>
         <td><%= pokemon.description %></td>
       </tr>
+      <% end %>
     <% end %>
 
-    <% @search_results_description.each do |pokemon| %>
-      <tr class="panel panel-default">
-        <td><%= pokemon.name %></td>
-        <td><%= pokemon.element %></td>
-        <td><%= pokemon.description %></td>
-      </tr>
+    <% if !@search_results_element.nil? %>
+      <% @search_results_element.each do |pokemon| %>
+        <tr class="panel panel-default">
+          <td><%= pokemon.name %></td>
+          <td><%= pokemon.element %></td>
+          <td><%= pokemon.description %></td>
+        </tr>
+      <% end %>
     <% end %>
 
-    <% @search_results_first_letter.each do |pokemon| %>
-      <tr class="panel panel-default">
-        <td><%= pokemon.name %></td>
-        <td><%= pokemon.element %></td>
-        <td><%= pokemon.description %></td>
-      </tr>
+    <% if !@search_results_first_letter.nil? %>
+      <% @search_results_first_letter.each do |pokemon| %>
+        <tr class="panel panel-default">
+          <td><%= pokemon.name %></td>
+          <td><%= pokemon.element %></td>
+          <td><%= pokemon.description %></td>
+        </tr>
+      <% end %>
     <% end %>
 
+  <% if !@search_results_two_letter.nil? %>
     <% @search_results_two_letter.each do |pokemon| %>
     <tr class="panel panel-default">
       <td><%= pokemon.name %></td>
@@ -51,6 +49,7 @@
       <td><%= pokemon.description %></td>
     </tr>
     <% end %>
+  <% end %>
 
   </tbody>
 </table>
