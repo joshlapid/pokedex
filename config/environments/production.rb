@@ -76,4 +76,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # AWS configuration variables for the production Environment.
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('pokedex'),
+    access_key_id: ENV.fetch('0612'),
+    secret_access_key: ENV.fetch('0612'),
+    s3_region: ENV.fetch('USA'),
+  }
+}
 end
