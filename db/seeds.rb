@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+pokemon1 = Pokemon.new
+pokemon1.number = 1
+pokemon1.name = Bulbasaur
+pokemon1.element = 'Grass/Poison'
+pokemon1.description = 'default'
