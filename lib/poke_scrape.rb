@@ -3,7 +3,7 @@ class PokemonScraper
   # require_relative '../app/models/pokemon.rb'
 
   def scrape
-    pokemon_names = ['Ivysaur', 'Dragonite', 'Charmander']
+    pokemon_names = ['Mewtwo', 'Dragonite', 'Charmander']
 
     agent = Mechanize.new { |agent|
       agent.user_agent_alias = 'Linux Firefox'
