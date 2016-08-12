@@ -104,6 +104,7 @@ GEM
     ntlm-http (0.1.1)
     pg (0.18.4)
     pkg-config (1.1.7)
+    puma (3.2.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -219,6 +220,7 @@ DEPENDENCIES
   mechanize
   nokogiri
   pg (~> 0.15)
+  puma
   rails (= 4.2.6)
   rails_12factor
   rspec-example_steps
