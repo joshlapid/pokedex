@@ -1,3 +1,3 @@
 class Picture < ActiveRecord::Base
-  belongs_to :pokemons
+  belongs_to :pokemon
 end
