@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-
-gem 'paperclip'
-gem 'aws-sdk'
 gem 'textacular'
 gem 'nokogiri'
 gem 'mechanize'
