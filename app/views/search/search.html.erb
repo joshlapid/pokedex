@@ -26,6 +26,8 @@
     <% if !@search_results_element.nil? %>
       <% @search_results_element.each do |pokemon| %>
         <tr class="panel panel-default">
+          <td><img src="<%= pokemon.picture %>"</td>
+          <td><%= pokemon.index_number %></td>
           <td><%= pokemon.name %></td>
           <td><%= pokemon.element %></td>
           <td><%= pokemon.description %></td>
@@ -36,6 +38,8 @@
     <% if !@search_results_first_letter.nil? %>
       <% @search_results_first_letter.each do |pokemon| %>
         <tr class="panel panel-default">
+          <td><img src="<%= pokemon.picture %>"</td>
+          <td><%= pokemon.index_number %></td>
           <td><%= pokemon.name %></td>
           <td><%= pokemon.element %></td>
           <td><%= pokemon.description %></td>
@@ -46,6 +50,8 @@
   <% if !@search_results_two_letter.nil? %>
     <% @search_results_two_letter.each do |pokemon| %>
       <tr class="panel panel-default">
+        <td><img src="<%= pokemon.picture %>"</td>
+        <td><%= pokemon.index_number %></td>
         <td><%= pokemon.name %></td>
         <td><%= pokemon.element %></td>
         <td><%= pokemon.description %></td>
