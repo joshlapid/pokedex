@@ -37,6 +37,4 @@ pokemon_names.each do |name|
 
   Pokemon.create(index_number: number, name: name, element: type1 + type2, description: description, picture: picture, color: type1)
 
-  delay_time = rand(11)
-  sleep(delay_time)
 end
