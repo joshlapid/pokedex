@@ -23,4 +23,8 @@ class SearchController < ApplicationController
     render 'search/search.html.erb'
   end
 
+  def all
+    @pokemon_all = Pokemon.all
+  end
+
 end

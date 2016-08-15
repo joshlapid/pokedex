@@ -1,0 +1,35 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Pokemon Index</h1>
+    <form action="search" method="get">
+      <input class="search_bar" type="text" name="search_input" placeholder="Name or Type"/>
+      <button class="search_bar" class="submit">Search</button>
+    </form>
+    <a class="all_pokemon" href="/search/all">All Pokemon</a>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+
+  </thead>
+  <tbody>
+
+  <% @pokemon_all.each do |pokemon| %>
+    <tr class="<%= pokemon.color %> panel panel-default">
+      <td><%= pokemon.index_number %></td>
+      <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
+      <td>
+        <h3><%= pokemon.name %></h3>
+        <h4><%= pokemon.element %></h4>
+        <br>
+        <p><%= pokemon.description %></p>
+      </td>
+      <td>
+        <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
+      </td>
+    </tr>
+  <% end %>
+
+  </tbody>
+</table>
