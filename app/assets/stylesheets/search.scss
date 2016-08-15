@@ -8,23 +8,23 @@
 }
 
 .Grass {
-  background-color: lighten(#9bcc50, 30%) !important;
+  background-color: lighten(#9bcc50, 20%) !important;
 }
 
 .Water {
-  background-color: lighten(#4592c4, 30%) !important;
+  background-color: lighten(#4592c4, 20%) !important;
 }
 
 .Fire {
-  background-color: lighten(#fd7d24, 30%) !important;
+  background-color: lighten(#fd7d24, 20%) !important;
 }
 
 .Poison {
-  background-color: lighten(#b97fc9, 30%) !important;
+  background-color: lighten(#b97fc9, 20%) !important;
 }
 
 .Psychic {
-  background-color: lighten(#f366b9, 30%) !important;
+  background-color: lighten(#f366b9, 20%) !important;
 }
 
 .Bug {
@@ -43,10 +43,6 @@
   background-color: lighten(#ab9842, 20%) !important;
 }
 
-.Fairy {
-  background-color: lighten(#fdb9e9, 20%) !important;
-}
-
 .Fighting {
   background-color: lighten(#d56723, 20%) !important;
 }
@@ -61,4 +57,12 @@
 
 .Dragon {
   background-color: lighten(#53a4cf, 20%) !important;
+}
+
+.Ghost {
+  background-color: lighten(#7b62a3, 20%) !important;
+}
+
+.Fairy {
+  background-color: lighten(#fdb9e9, 20%) !important;
 }
