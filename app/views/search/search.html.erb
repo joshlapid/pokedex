@@ -88,19 +88,23 @@
 
   <% if !@search_results_three_letter.nil? %>
     <% @search_results_three_letter.each do |pokemon| %>
-      <tr class="<%= pokemon.color %> panel panel-default">
-        <td><%= pokemon.index_number %></td>
-        <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
-        <td>
-          <h3><%= pokemon.name %></h3>
-          <h4><%= pokemon.element %></h4>
-          <br>
-          <p><%= pokemon.description %></p>
-        </td>
-        <td>
-          <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
-        </td>
-      </tr>
+      <% @search_results_name.each do |pokemon2| %>
+        <% if pokemon != pokemon2 %>
+          <tr class="<%= pokemon.color %> panel panel-default">
+            <td><%= pokemon.index_number %></td>
+            <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
+            <td>
+              <h3><%= pokemon.name %></h3>
+              <h4><%= pokemon.element %></h4>
+              <br>
+              <p><%= pokemon.description %></p>
+            </td>
+            <td>
+              <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
 
