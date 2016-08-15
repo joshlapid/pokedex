@@ -15,7 +15,7 @@
   <tbody>
     <% if !@search_results_name.nil? %>
       <% @search_results_name.each do |pokemon| %>
-        <tr class="panel panel-default">
+        <tr class="<%= pokemon.color %> panel panel-default">
           <td><%= pokemon.index_number %></td>
           <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
           <td>
@@ -33,7 +33,7 @@
 
     <% if !@search_results_element.nil? %>
       <% @search_results_element.each do |pokemon| %>
-        <tr class="panel panel-default">
+        <tr class="<%= pokemon.color %> panel panel-default">
           <td><%= pokemon.index_number %></td>
           <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
           <td>
@@ -51,7 +51,7 @@
 
     <% if !@search_results_first_letter.nil? %>
       <% @search_results_first_letter.each do |pokemon| %>
-        <tr class="panel panel-default">
+        <tr class="<%= pokemon.color %> panel panel-default">
           <td><%= pokemon.index_number %></td>
           <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
           <td>
@@ -69,7 +69,7 @@
 
   <% if !@search_results_two_letter.nil? %>
     <% @search_results_two_letter.each do |pokemon| %>
-      <tr class="panel panel-default">
+      <tr class="<%= pokemon.color %> panel panel-default">
         <td><%= pokemon.index_number %></td>
         <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
         <td>
