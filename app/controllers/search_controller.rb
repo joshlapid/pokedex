@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def search
+    @pokemon_all = Pokemon.all
     # Searches for pokemon by name
     @search_results_name = Pokemon.fuzzy_search(name: params[:search_input])
     # Searches for pokemon by element
