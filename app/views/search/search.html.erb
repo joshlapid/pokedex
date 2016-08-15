@@ -1,9 +1,11 @@
-<div class="jumbotron">
-  <h1>Pokemon Index</h1>
-  <form action="search" method="get">
-    <input type="text" name="search_input"/>
-    <button class="submit">Search</button>
-  </form>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Pokemon Index</h1>
+    <form action="search" method="get">
+      <input type="text" name="search_input"/>
+      <button class="submit">Search</button>
+    </form>
+  </div>
 </div>
 
 <table class="table">
@@ -14,11 +16,17 @@
     <% if !@search_results_name.nil? %>
       <% @search_results_name.each do |pokemon| %>
         <tr class="panel panel-default">
-          <td><img src="<%= pokemon.picture %>"</td>
           <td><%= pokemon.index_number %></td>
-          <td><%= pokemon.name %></td>
-          <td><%= pokemon.element %></td>
-          <td><%= pokemon.description %></td>
+          <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
+          <td>
+            <h3><%= pokemon.name %></h3>
+            <h4><%= pokemon.element %></h4>
+            <br>
+            <p><%= pokemon.description %></p>
+          </td>
+          <td>
+            <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
+          </td>
         </tr>
       <% end %>
     <% end %>
@@ -26,11 +34,17 @@
     <% if !@search_results_element.nil? %>
       <% @search_results_element.each do |pokemon| %>
         <tr class="panel panel-default">
-          <td><img src="<%= pokemon.picture %>"</td>
           <td><%= pokemon.index_number %></td>
-          <td><%= pokemon.name %></td>
-          <td><%= pokemon.element %></td>
-          <td><%= pokemon.description %></td>
+          <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
+          <td>
+            <h3><%= pokemon.name %></h3>
+            <h4><%= pokemon.element %></h4>
+            <br>
+            <p><%= pokemon.description %></p>
+          </td>
+          <td>
+            <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
+          </td>
         </tr>
       <% end %>
     <% end %>
@@ -38,11 +52,17 @@
     <% if !@search_results_first_letter.nil? %>
       <% @search_results_first_letter.each do |pokemon| %>
         <tr class="panel panel-default">
-          <td><img src="<%= pokemon.picture %>"</td>
           <td><%= pokemon.index_number %></td>
-          <td><%= pokemon.name %></td>
-          <td><%= pokemon.element %></td>
-          <td><%= pokemon.description %></td>
+          <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
+          <td>
+            <h3><%= pokemon.name %></h3>
+            <h4><%= pokemon.element %></h4>
+            <br>
+            <p><%= pokemon.description %></p>
+          </td>
+          <td>
+            <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
+          </td>
         </tr>
       <% end %>
     <% end %>
@@ -50,11 +70,17 @@
   <% if !@search_results_two_letter.nil? %>
     <% @search_results_two_letter.each do |pokemon| %>
       <tr class="panel panel-default">
-        <td><img src="<%= pokemon.picture %>"</td>
         <td><%= pokemon.index_number %></td>
-        <td><%= pokemon.name %></td>
-        <td><%= pokemon.element %></td>
-        <td><%= pokemon.description %></td>
+        <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
+        <td>
+          <h3><%= pokemon.name %></h3>
+          <h4><%= pokemon.element %></h4>
+          <br>
+          <p><%= pokemon.description %></p>
+        </td>
+        <td>
+          <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
+        </td>
       </tr>
     <% end %>
   <% end %>
