@@ -16,6 +16,10 @@ class SearchController < ApplicationController
       @search_results_two_letter = Pokemon.where('substr(name, 1, 2) = ? OR substr(name, 1, 2) = ?', params[:search_input], params[:search_input].capitalize)
     end
 
+    if !params[:search_input].nil?
+      @search_results_three_letter = Pokemon.where('substr(name, 1, 3) = ? OR substr(name, 1, 3) = ?', params[:search_input], params[:search_input].capitalize)
+    end
+
     if params[:search_input].nil?
       @pokemon_all = Pokemon.all
     end
