@@ -89,7 +89,7 @@
   <% if !@search_results_three_letter.nil? %>
     <% @search_results_three_letter.each do |pokemon| %>
       <% @search_results_name.each do |pokemon2| %>
-        <% if pokemon != pokemon2 %>
+        <% if pokemon2 != pokemon %>
           <tr class="<%= pokemon.color %> panel panel-default">
             <td><%= pokemon.index_number %></td>
             <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
