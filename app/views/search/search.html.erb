@@ -14,23 +14,6 @@
 
   </thead>
   <tbody>
-    <% if !@search_results_name.nil? %>
-      <% @search_results_name.each do |pokemon| %>
-        <tr class="<%= pokemon.color %> panel panel-default">
-          <td><%= pokemon.index_number %></td>
-          <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
-          <td>
-            <h3><%= pokemon.name %></h3>
-            <h4><%= pokemon.element %></h4>
-            <br>
-            <p><%= pokemon.description %></p>
-          </td>
-          <td>
-            <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
-          </td>
-        </tr>
-      <% end %>
-    <% end %>
 
     <% if !@search_results_element.nil? %>
       <% @search_results_element.each do |pokemon| %>
@@ -50,8 +33,8 @@
       <% end %>
     <% end %>
 
-    <% if !@search_results_first_letter.nil? %>
-      <% @search_results_first_letter.each do |pokemon| %>
+    <% if !@search_results.nil? %>
+      <% @search_results.each do |pokemon| %>
         <tr class="<%= pokemon.color %> panel panel-default">
           <td><%= pokemon.index_number %></td>
           <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
@@ -67,46 +50,6 @@
         </tr>
       <% end %>
     <% end %>
-
-  <% if !@search_results_two_letter.nil? %>
-    <% @search_results_two_letter.each do |pokemon| %>
-      <tr class="<%= pokemon.color %> panel panel-default">
-        <td><%= pokemon.index_number %></td>
-        <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
-        <td>
-          <h3><%= pokemon.name %></h3>
-          <h4><%= pokemon.element %></h4>
-          <br>
-          <p><%= pokemon.description %></p>
-        </td>
-        <td>
-          <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
-        </td>
-      </tr>
-    <% end %>
-  <% end %>
-
-  <% if !@search_results_three_letter.nil? %>
-    <% @search_results_three_letter.each do |pokemon| %>
-      <% @search_results_name.each do |pokemon2| %>
-        <% if pokemon2 != pokemon %>
-          <tr class="<%= pokemon.color %> panel panel-default">
-            <td><%= pokemon.index_number %></td>
-            <td><img class="pokemon_picture" src="<%= pokemon.picture %>"</td>
-            <td>
-              <h3><%= pokemon.name %></h3>
-              <h4><%= pokemon.element %></h4>
-              <br>
-              <p><%= pokemon.description %></p>
-            </td>
-            <td>
-              <input onclick='responsiveVoice.speak("<%= escape_javascript pokemon.description %>");' type='button' value='🔊 Play' />
-            </td>
-          </tr>
-        <% end %>
-      <% end %>
-    <% end %>
-  <% end %>
 
   <% if params[:search_input] == "all" %>
     <% @pokemon_all.each do |pokemon| %>
